@@ -16,6 +16,11 @@ new Chart(document.getElementById("graficoPizza"), {
   options: {
     responsive: false,
     plugins: {
+      legend: {
+        labels:{
+          color:'#000000ff'
+        }
+      },
       tooltip: {
         callbacks: {
           label: function (context) {
@@ -38,15 +43,36 @@ new Chart(document.getElementById("graficoBarras"), {
     datasets: [{
       label: "Distribuição (%)",
       data: dados.valores,
-      backgroundColor: "#36A2EB"
+      backgroundColor: "#0f1c8fff"
     }]
   },
   options: {
     responsive: false,
+    plugins:{
+      legend:{
+        labels:{
+          color: '#000000ff'
+        }
+      }
+    },
     scales: {
       y: {
         beginAtZero: true,
-        max: 100
+        max: 100,
+        ticks:{
+          color:'#000000ff'
+        },
+        grid:{
+          color: '#000000ff'
+        }
+      },
+      x: {
+          ticks:{
+            color:'#000000ff'
+          },
+          grid:{
+            color: '#000000ff'
+        }
       }
     }
   }
